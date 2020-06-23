@@ -16,9 +16,28 @@ class IceCream
     @price = price
   end
 
+  def flavor
+    @flavor
+  end
+
+  def size
+    @size
+  end
+
+  def price
+    @price
+  end
+
+  def changeprice=(change)
+    @price = change
+  end
+
+
   
 end
 
 ice_cream1 = IceCream.new("chocolate", "pint", 5)
-
-puts ice_cream1.flavor
+ice_cream2 = IceCream.new("sweet cream", "gallon", 10)
+p ice_cream1.flavor
+p ice_cream1.size
+p ice_cream1.price
