@@ -10,10 +10,12 @@
 # ice_cream2 = {:flavor => "sweet cream", :size => gallon, price: 10}
 
 class IceCream
-  def initialize(flavor, size, price) 
-    @flavor = flavor
-    @size = size
-    @price = price
+  
+
+  def initialize(input_options) 
+    @flavor = input_options[:flavor]
+    @size = input_options[:size]
+    @price = input_options[:price]
   end
 
   def flavor
@@ -27,17 +29,8 @@ class IceCream
   def price
     @price
   end
-
-  def changeprice=(change)
-    @price = change
-  end
-
-
-  
 end
 
-ice_cream1 = IceCream.new("chocolate", "pint", 5)
+ice_cream1 = IceCream.new(flavor: "chocolate", size: "pint", price: 5)
 ice_cream2 = IceCream.new("sweet cream", "gallon", 10)
-p ice_cream1.flavor
-p ice_cream1.size
-p ice_cream1.price
+p ice_cream1
