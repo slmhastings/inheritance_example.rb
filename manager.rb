@@ -29,7 +29,16 @@ class Manager < Employee
     @employees = input_options[:employees]
   end
 
-  
+  def give_all_raises
+    @employees 
+    i = 0
+    puts "hi"
+    while i < @employees.length
+      give_annual_raise
+      i += 1
+    end
+    
+  end
 
   def send_report
     puts "Sending email..."
@@ -41,5 +50,8 @@ end
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
+manager.give_all_raises
+
+
 
  
